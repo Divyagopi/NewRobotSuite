@@ -1,0 +1,2522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180304 17:55:47.051" generator="Robot 2.8.5 (Python 2.7.9 on win32)">
+<suite source="D:\Sample_RobotExample\SamplePrograms.robot" id="s1" name="SamplePrograms">
+<test id="s1-t1" name="Testcase1">
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://google.co.in</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180304 17:55:47.441" level="INFO">Opening browser 'chrome' to base url 'http://google.co.in'</msg>
+<status status="PASS" endtime="20180304 17:55:53.332" starttime="20180304 17:55:47.441"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180304 17:55:58.346" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180304 17:55:58.346" starttime="20180304 17:55:53.333"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//div[@id='hplogo']/canvas</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20180304 17:56:03.830" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180304 17:56:03.830" starttime="20180304 17:56:03.438"></status>
+</kw>
+<msg timestamp="20180304 17:56:03.830" level="FAIL">Element locator 'xpath=//div[@id='hplogo']/canvas' did not match any elements after 5 seconds</msg>
+<status status="FAIL" endtime="20180304 17:56:03.830" starttime="20180304 17:55:58.346"></status>
+</kw>
+<kw type="teardown" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.149" starttime="20180304 17:56:03.830"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>smoke</tag>
+</tags>
+<status status="FAIL" endtime="20180304 17:56:06.149" critical="yes" starttime="20180304 17:55:47.441">Element locator 'xpath=//div[@id='hplogo']/canvas' did not match any elements after 5 seconds</status>
+</test>
+<test id="s1-t2" name="Testcase2">
+<kw type="kw" name="${status} = BuiltIn.Run Keyword And Ignore Error">
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<arguments>
+<arg>should be equal as strings</arg>
+<arg>testing suite</arg>
+<arg>testing suite</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Should Be Equal As Strings">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>testing suite</arg>
+<arg>testing suite</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.165" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20180304 17:56:06.165" starttime="20180304 17:56:06.165"></status>
+</kw>
+<msg timestamp="20180304 17:56:06.165" level="INFO">${status} = ('PASS', None)</msg>
+<status status="PASS" endtime="20180304 17:56:06.165" starttime="20180304 17:56:06.165"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${status}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.165" starttime="20180304 17:56:06.165"></status>
+</kw>
+<kw type="teardown" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.180" starttime="20180304 17:56:06.165"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>sanity</tag>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" endtime="20180304 17:56:06.180" critical="yes" starttime="20180304 17:56:06.149"></status>
+</test>
+<test id="s1-t3" name="Tescase3">
+<kw type="kw" name="ExcelLibrary.Open Excel">
+<doc>Opens the Excel file from the path provided in the file name parameter.</doc>
+<arguments>
+<arg>${Filename}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.196" level="FAIL">Non-existing variable '${Filename}'.</msg>
+<status status="FAIL" endtime="20180304 17:56:06.196" starttime="20180304 17:56:06.180"></status>
+</kw>
+<kw type="teardown" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.196" starttime="20180304 17:56:06.196"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>smoke</tag>
+</tags>
+<status status="FAIL" endtime="20180304 17:56:06.196" critical="yes" starttime="20180304 17:56:06.180">Non-existing variable '${Filename}'.</status>
+</test>
+<test id="s1-t4" name="Testcase4">
+<kw type="kw" name="GenericLibrary.Test Intialization">
+<doc></doc>
+<arguments>
+<arg>1</arg>
+<arg>Sheet1</arg>
+</arguments>
+<kw type="kw" name="ExcelLibrary.Open Excel">
+<doc>Opens the Excel file from the path provided in the file name parameter.</doc>
+<arguments>
+<arg>${TestdataFile}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.211" starttime="20180304 17:56:06.196"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${rownum}</arg>
+<arg>${rownum}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.211" level="INFO">${rownum} = 1</msg>
+<status status="PASS" endtime="20180304 17:56:06.211" starttime="20180304 17:56:06.211"></status>
+</kw>
+<kw type="kw" name="${username} = GenericLibrary.Get cell value from excel">
+<doc></doc>
+<arguments>
+<arg>${testsheetname}</arg>
+<arg>${rownum}</arg>
+<arg>Username</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${sColumnName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.211" level="INFO">Username</msg>
+<status status="PASS" endtime="20180304 17:56:06.211" starttime="20180304 17:56:06.211"></status>
+</kw>
+<kw type="kw" name="${colCount} = ExcelLibrary.Get Column Count">
+<doc>Returns the specific number of columns of the sheet name specified.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.211" level="INFO">${colCount} = 4</msg>
+<status status="PASS" endtime="20180304 17:56:06.211" starttime="20180304 17:56:06.211"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${colCount}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.211" level="INFO">4</msg>
+<status status="PASS" endtime="20180304 17:56:06.211" starttime="20180304 17:56:06.211"></status>
+</kw>
+<kw type="for" name="${y} IN RANGE [ 0 | ${colCount} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${y} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.211" level="INFO">${header} = S.No</msg>
+<status status="PASS" endtime="20180304 17:56:06.211" starttime="20180304 17:56:06.211"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.227" level="INFO">S.No</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.211"></status>
+</kw>
+<kw type="foritem" name="${y} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.227" level="INFO">${header} = Username</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.227" level="INFO">Username</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Test Variable">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.227" level="INFO">${colNum} = 1</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="foritem" name="${y} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.227" level="INFO">${header} = Password</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.227" level="INFO">Password</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="foritem" name="${y} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.227" level="INFO">${header} = Message</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.227" level="INFO">Message</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.211"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"column number is" ${colNum}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.227" level="INFO">"column number is" 1</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="kw" name="${iTotalRows} = ExcelLibrary.Get Row Count">
+<doc>Returns the specific number of rows of the sheet name specified.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.227" level="INFO">${iTotalRows} = 3</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"Row number is" ${iTotalRows}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.227" level="INFO">"Row number is" 3</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="for" name="${iRowNo} IN RANGE [ 0 | ${iTotalRows} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${iRowNo} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.227" level="INFO">${TC_Num} = S.No</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.243" level="INFO">${sSearchedData} = None</msg>
+<status status="PASS" endtime="20180304 17:56:06.227" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.227"></status>
+</kw>
+<kw type="foritem" name="${iRowNo} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.243" level="INFO">${TC_Num} = 1</msg>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<kw type="kw" name="ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<msg timestamp="20180304 17:56:06.243" level="INFO">${sSearchedData} = kothakotagopi@gmail.com</msg>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Exit For Loop">
+<doc>Stops executing the enclosing for loop.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20180304 17:56:06.243" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.227"></status>
+</kw>
+<msg timestamp="20180304 17:56:06.243" level="INFO">${username} = kothakotagopi@gmail.com</msg>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.211"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Suite Variable">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${IN_Username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.243" level="INFO">${IN_Username} = kothakotagopi@gmail.com</msg>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${IN_Username}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.243" level="INFO">kothakotagopi@gmail.com</msg>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="kw" name="${password} = GenericLibrary.Get cell value from excel">
+<doc></doc>
+<arguments>
+<arg>${testsheetname}</arg>
+<arg>${rownum}</arg>
+<arg>Password</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${sColumnName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.243" level="INFO">Password</msg>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="kw" name="${colCount} = ExcelLibrary.Get Column Count">
+<doc>Returns the specific number of columns of the sheet name specified.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.243" level="INFO">${colCount} = 4</msg>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${colCount}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.243" level="INFO">4</msg>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="for" name="${y} IN RANGE [ 0 | ${colCount} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${y} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.243" level="INFO">${header} = S.No</msg>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.243" level="INFO">S.No</msg>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.243" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="foritem" name="${y} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">${header} = Username</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">Username</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="foritem" name="${y} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">${header} = Password</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">Password</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Test Variable">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">${colNum} = 2</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="foritem" name="${y} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">${header} = Message</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">Message</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"column number is" ${colNum}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">"column number is" 2</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="kw" name="${iTotalRows} = ExcelLibrary.Get Row Count">
+<doc>Returns the specific number of rows of the sheet name specified.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">${iTotalRows} = 3</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"Row number is" ${iTotalRows}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">"Row number is" 3</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="for" name="${iRowNo} IN RANGE [ 0 | ${iTotalRows} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${iRowNo} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">${TC_Num} = S.No</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">${sSearchedData} = None</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="foritem" name="${iRowNo} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.258" level="INFO">${TC_Num} = 1</msg>
+<status status="PASS" endtime="20180304 17:56:06.258" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<kw type="kw" name="ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<msg timestamp="20180304 17:56:06.274" level="INFO">${sSearchedData} = sdfsfsdf</msg>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.258"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Exit For Loop">
+<doc>Stops executing the enclosing for loop.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20180304 17:56:06.274" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.258"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.258"></status>
+</kw>
+<msg timestamp="20180304 17:56:06.274" level="INFO">${password} = sdfsfsdf</msg>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.243"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Suite Variable">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${IN_Password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.274" level="INFO">${IN_Password} = sdfsfsdf</msg>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${IN_Password}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.274" level="INFO">sdfsfsdf</msg>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="kw" name="${message} = GenericLibrary.Get cell value from excel">
+<doc></doc>
+<arguments>
+<arg>${testsheetname}</arg>
+<arg>${rownum}</arg>
+<arg>Message</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${sColumnName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.274" level="INFO">Message</msg>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="kw" name="${colCount} = ExcelLibrary.Get Column Count">
+<doc>Returns the specific number of columns of the sheet name specified.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.274" level="INFO">${colCount} = 4</msg>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${colCount}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.274" level="INFO">4</msg>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="for" name="${y} IN RANGE [ 0 | ${colCount} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${y} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.274" level="INFO">${header} = S.No</msg>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.274" level="INFO">S.No</msg>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="foritem" name="${y} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.274" level="INFO">${header} = Username</msg>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.274" level="INFO">Username</msg>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.274" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="foritem" name="${y} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.289" level="INFO">${header} = Password</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.289" level="INFO">Password</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="foritem" name="${y} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.289" level="INFO">${header} = Message</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.289" level="INFO">Message</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Test Variable">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.289" level="INFO">${colNum} = 3</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"column number is" ${colNum}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.289" level="INFO">"column number is" 3</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<kw type="kw" name="${iTotalRows} = ExcelLibrary.Get Row Count">
+<doc>Returns the specific number of rows of the sheet name specified.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.289" level="INFO">${iTotalRows} = 3</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"Row number is" ${iTotalRows}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.289" level="INFO">"Row number is" 3</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<kw type="for" name="${iRowNo} IN RANGE [ 0 | ${iTotalRows} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${iRowNo} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.289" level="INFO">${TC_Num} = S.No</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.289" level="INFO">${sSearchedData} = None</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<kw type="foritem" name="${iRowNo} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.289" level="INFO">${TC_Num} = 1</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<kw type="kw" name="ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<msg timestamp="20180304 17:56:06.289" level="INFO">${sSearchedData} = Please check your email and password.</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Exit For Loop">
+<doc>Stops executing the enclosing for loop.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20180304 17:56:06.289" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20180304 17:56:06.289" starttime="20180304 17:56:06.289"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.305" starttime="20180304 17:56:06.289"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.305" starttime="20180304 17:56:06.289"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.305" starttime="20180304 17:56:06.289"></status>
+</kw>
+<msg timestamp="20180304 17:56:06.305" level="INFO">${message} = Please check your email and password.</msg>
+<status status="PASS" endtime="20180304 17:56:06.305" starttime="20180304 17:56:06.274"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Suite Variable">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${IN_Message}</arg>
+<arg>${message}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.305" level="INFO">${IN_Message} = Please check your email and password.</msg>
+<status status="PASS" endtime="20180304 17:56:06.305" starttime="20180304 17:56:06.305"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${IN_Message}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.305" level="INFO">Please check your email and password.</msg>
+<status status="PASS" endtime="20180304 17:56:06.305" starttime="20180304 17:56:06.305"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:06.305" starttime="20180304 17:56:06.196"></status>
+</kw>
+<kw type="kw" name="Open Application">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Open the application</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.305" level="INFO">Open the application</msg>
+<status status="PASS" endtime="20180304 17:56:06.305" starttime="20180304 17:56:06.305"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://www.udemy.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180304 17:56:06.305" level="INFO">Opening browser 'chrome' to base url 'https://www.udemy.com/'</msg>
+<status status="PASS" endtime="20180304 17:56:17.270" starttime="20180304 17:56:06.305"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=img.udemy-logo</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:17.359" starttime="20180304 17:56:17.272"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:17.359" starttime="20180304 17:56:06.305"></status>
+</kw>
+<kw type="kw" name="Login to Application">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=img.udemy-logo</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:17.391" starttime="20180304 17:56:17.359"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=a.btn.btn-quaternary</arg>
+</arguments>
+<msg timestamp="20180304 17:56:17.391" level="INFO">Clicking element 'css=a.btn.btn-quaternary'.</msg>
+<status status="PASS" endtime="20180304 17:56:17.481" starttime="20180304 17:56:17.391"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20180304 17:56:27.485" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20180304 17:56:27.485" starttime="20180304 17:56:17.482"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${IN_Username}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:27.485" level="INFO">Typing text 'kothakotagopi@gmail.com' into text field 'xpath=//input[@id='id_email']'</msg>
+<status status="PASS" endtime="20180304 17:56:27.786" starttime="20180304 17:56:27.485"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180304 17:56:29.789" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180304 17:56:29.789" starttime="20180304 17:56:27.787"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>${IN_Password}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:29.789" level="INFO">Typing text 'sdfsfsdf' into text field 'xpath=//input[@id='id_password']'</msg>
+<status status="PASS" endtime="20180304 17:56:29.970" starttime="20180304 17:56:29.789"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180304 17:56:31.986" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180304 17:56:31.986" starttime="20180304 17:56:29.970"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20180304 17:56:32.501" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180304 17:56:32.501" starttime="20180304 17:56:31.986"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=.//*[@id='submit-id-submit']</arg>
+</arguments>
+<msg timestamp="20180304 17:56:32.501" level="INFO">Clicking element 'xpath=.//*[@id='submit-id-submit']'.</msg>
+<status status="PASS" endtime="20180304 17:56:32.579" starttime="20180304 17:56:32.501"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20180304 17:56:33.159" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180304 17:56:33.159" starttime="20180304 17:56:32.580"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:33.159" starttime="20180304 17:56:17.359"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180304 17:56:36.174" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180304 17:56:36.174" starttime="20180304 17:56:33.159"></status>
+</kw>
+<kw type="kw" name="${Message1} = Selenium2Library.Get Text">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${errormessage}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20180304 17:56:36.693" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180304 17:56:36.693" starttime="20180304 17:56:36.205"></status>
+</kw>
+<msg timestamp="20180304 17:56:36.693" level="FAIL">ValueError: Element locator 'xpath=.//*[@id='login-form']/div[1]/div/div' did not match any elements.</msg>
+<status status="FAIL" endtime="20180304 17:56:36.693" starttime="20180304 17:56:36.174"></status>
+</kw>
+<kw type="teardown" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.064" starttime="20180304 17:56:36.693"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>smoke</tag>
+</tags>
+<status status="FAIL" endtime="20180304 17:56:39.064" critical="yes" starttime="20180304 17:56:06.196">ValueError: Element locator 'xpath=.//*[@id='login-form']/div[1]/div/div' did not match any elements.</status>
+</test>
+<test id="s1-t5" name="Testcase6">
+<kw type="kw" name="GenericLibrary.Test Intialization">
+<doc></doc>
+<arguments>
+<arg>2</arg>
+<arg>Sheet1</arg>
+</arguments>
+<kw type="kw" name="ExcelLibrary.Open Excel">
+<doc>Opens the Excel file from the path provided in the file name parameter.</doc>
+<arguments>
+<arg>${TestdataFile}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.095" starttime="20180304 17:56:39.064"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Global Variable">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${rownum}</arg>
+<arg>${rownum}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.095" level="INFO">${rownum} = 2</msg>
+<status status="PASS" endtime="20180304 17:56:39.095" starttime="20180304 17:56:39.095"></status>
+</kw>
+<kw type="kw" name="${username} = GenericLibrary.Get cell value from excel">
+<doc></doc>
+<arguments>
+<arg>${testsheetname}</arg>
+<arg>${rownum}</arg>
+<arg>Username</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${sColumnName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.095" level="INFO">Username</msg>
+<status status="PASS" endtime="20180304 17:56:39.095" starttime="20180304 17:56:39.095"></status>
+</kw>
+<kw type="kw" name="${colCount} = ExcelLibrary.Get Column Count">
+<doc>Returns the specific number of columns of the sheet name specified.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.095" level="INFO">${colCount} = 4</msg>
+<status status="PASS" endtime="20180304 17:56:39.095" starttime="20180304 17:56:39.095"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${colCount}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.095" level="INFO">4</msg>
+<status status="PASS" endtime="20180304 17:56:39.095" starttime="20180304 17:56:39.095"></status>
+</kw>
+<kw type="for" name="${y} IN RANGE [ 0 | ${colCount} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${y} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.095" level="INFO">${header} = S.No</msg>
+<status status="PASS" endtime="20180304 17:56:39.095" starttime="20180304 17:56:39.095"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.095" level="INFO">S.No</msg>
+<status status="PASS" endtime="20180304 17:56:39.095" starttime="20180304 17:56:39.095"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.095"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.095"></status>
+</kw>
+<kw type="foritem" name="${y} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.111" level="INFO">${header} = Username</msg>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.111"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.111" level="INFO">Username</msg>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.111"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Test Variable">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.111" level="INFO">${colNum} = 1</msg>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.111"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.111"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.111"></status>
+</kw>
+<kw type="foritem" name="${y} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.111" level="INFO">${header} = Password</msg>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.111"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.111" level="INFO">Password</msg>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.111"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.111"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.111"></status>
+</kw>
+<kw type="foritem" name="${y} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.111" level="INFO">${header} = Message</msg>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.111"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.111" level="INFO">Message</msg>
+<status status="PASS" endtime="20180304 17:56:39.111" starttime="20180304 17:56:39.111"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.111"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.111"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.095"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"column number is" ${colNum}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.126" level="INFO">"column number is" 1</msg>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="kw" name="${iTotalRows} = ExcelLibrary.Get Row Count">
+<doc>Returns the specific number of rows of the sheet name specified.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.126" level="INFO">${iTotalRows} = 3</msg>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"Row number is" ${iTotalRows}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.126" level="INFO">"Row number is" 3</msg>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="for" name="${iRowNo} IN RANGE [ 0 | ${iTotalRows} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${iRowNo} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.126" level="INFO">${TC_Num} = S.No</msg>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.126" level="INFO">${sSearchedData} = None</msg>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="foritem" name="${iRowNo} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.126" level="INFO">${TC_Num} = 1</msg>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.126" level="INFO">${sSearchedData} = None</msg>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="foritem" name="${iRowNo} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.126" level="INFO">${TC_Num} = 2</msg>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<kw type="kw" name="ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<msg timestamp="20180304 17:56:39.126" level="INFO">${sSearchedData} = test@gmail.com</msg>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Exit For Loop">
+<doc>Stops executing the enclosing for loop.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20180304 17:56:39.126" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<msg timestamp="20180304 17:56:39.126" level="INFO">${username} = test@gmail.com</msg>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.095"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Suite Variable">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${IN_Username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.126" level="INFO">${IN_Username} = test@gmail.com</msg>
+<status status="PASS" endtime="20180304 17:56:39.126" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${IN_Username}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.142" level="INFO">test@gmail.com</msg>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.126"></status>
+</kw>
+<kw type="kw" name="${password} = GenericLibrary.Get cell value from excel">
+<doc></doc>
+<arguments>
+<arg>${testsheetname}</arg>
+<arg>${rownum}</arg>
+<arg>Password</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${sColumnName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.142" level="INFO">Password</msg>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="kw" name="${colCount} = ExcelLibrary.Get Column Count">
+<doc>Returns the specific number of columns of the sheet name specified.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.142" level="INFO">${colCount} = 4</msg>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${colCount}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.142" level="INFO">4</msg>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="for" name="${y} IN RANGE [ 0 | ${colCount} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${y} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.142" level="INFO">${header} = S.No</msg>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.142" level="INFO">S.No</msg>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="foritem" name="${y} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.142" level="INFO">${header} = Username</msg>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.142" level="INFO">Username</msg>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="foritem" name="${y} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.142" level="INFO">${header} = Password</msg>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.142" level="INFO">Password</msg>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Test Variable">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.142" level="INFO">${colNum} = 2</msg>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="foritem" name="${y} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.142" level="INFO">${header} = Message</msg>
+<status status="PASS" endtime="20180304 17:56:39.142" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.158" level="INFO">Message</msg>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.142"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"column number is" ${colNum}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.158" level="INFO">"column number is" 2</msg>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<kw type="kw" name="${iTotalRows} = ExcelLibrary.Get Row Count">
+<doc>Returns the specific number of rows of the sheet name specified.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.158" level="INFO">${iTotalRows} = 3</msg>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"Row number is" ${iTotalRows}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.158" level="INFO">"Row number is" 3</msg>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<kw type="for" name="${iRowNo} IN RANGE [ 0 | ${iTotalRows} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${iRowNo} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.158" level="INFO">${TC_Num} = S.No</msg>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.158" level="INFO">${sSearchedData} = None</msg>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<kw type="foritem" name="${iRowNo} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.158" level="INFO">${TC_Num} = 1</msg>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.158" level="INFO">${sSearchedData} = None</msg>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<kw type="foritem" name="${iRowNo} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.158" level="INFO">${TC_Num} = 2</msg>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<kw type="kw" name="ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<msg timestamp="20180304 17:56:39.158" level="INFO">${sSearchedData} = ganesh01</msg>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Exit For Loop">
+<doc>Stops executing the enclosing for loop.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20180304 17:56:39.158" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.158" starttime="20180304 17:56:39.158"></status>
+</kw>
+<msg timestamp="20180304 17:56:39.173" level="INFO">${password} = ganesh01</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.142"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Suite Variable">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${IN_Password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">${IN_Password} = ganesh01</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${IN_Password}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">ganesh01</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="${message} = GenericLibrary.Get cell value from excel">
+<doc></doc>
+<arguments>
+<arg>${testsheetname}</arg>
+<arg>${rownum}</arg>
+<arg>Message</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${sColumnName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">Message</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="${colCount} = ExcelLibrary.Get Column Count">
+<doc>Returns the specific number of columns of the sheet name specified.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">${colCount} = 4</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${colCount}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">4</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="for" name="${y} IN RANGE [ 0 | ${colCount} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${y} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">${header} = S.No</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">S.No</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="foritem" name="${y} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">${header} = Username</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">Username</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="foritem" name="${y} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">${header} = Password</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">Password</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="foritem" name="${y} = 3">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${header} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${y}</arg>
+<arg>0</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">${header} = Message</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${header}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.173" level="INFO">Message</msg>
+<status status="PASS" endtime="20180304 17:56:39.173" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${header}"=="${sColumnName}"</arg>
+<arg>Set Test Variable</arg>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Set Test Variable">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${colNum}</arg>
+<arg>${y}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.189" level="INFO">${colNum} = 3</msg>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.173"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"column number is" ${colNum}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.189" level="INFO">"column number is" 3</msg>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<kw type="kw" name="${iTotalRows} = ExcelLibrary.Get Row Count">
+<doc>Returns the specific number of rows of the sheet name specified.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.189" level="INFO">${iTotalRows} = 3</msg>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>"Row number is" ${iTotalRows}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.189" level="INFO">"Row number is" 3</msg>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<kw type="for" name="${iRowNo} IN RANGE [ 0 | ${iTotalRows} ]">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="foritem" name="${iRowNo} = 0">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.189" level="INFO">${TC_Num} = S.No</msg>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.189" level="INFO">${sSearchedData} = None</msg>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<kw type="foritem" name="${iRowNo} = 1">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.189" level="INFO">${TC_Num} = 1</msg>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.189" level="INFO">${sSearchedData} = None</msg>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<kw type="foritem" name="${iRowNo} = 2">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${TC_Num} = ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>0</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.189" level="INFO">${TC_Num} = 2</msg>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<kw type="kw" name="${sSearchedData} = BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>ExcelLibrary.Read Cell Data By Coordinates</arg>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<kw type="kw" name="ExcelLibrary.Read Cell Data By Coordinates">
+<doc>Uses the column and row to return the data from that cell.</doc>
+<arguments>
+<arg>${sSheetName}</arg>
+<arg>${colNum}</arg>
+<arg>${iRowNo}</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<msg timestamp="20180304 17:56:39.189" level="INFO">${sSearchedData} = Please check your email and password.</msg>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>"${sTestCaseNo}"=="${TC_Num}"</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw type="kw" name="BuiltIn.Exit For Loop">
+<doc>Stops executing the enclosing for loop.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20180304 17:56:39.189" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.189" starttime="20180304 17:56:39.189"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.204" starttime="20180304 17:56:39.189"></status>
+</kw>
+<msg timestamp="20180304 17:56:39.204" level="INFO">${message} = Please check your email and password.</msg>
+<status status="PASS" endtime="20180304 17:56:39.204" starttime="20180304 17:56:39.173"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Set Suite Variable">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${IN_Message}</arg>
+<arg>${message}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.204" level="INFO">${IN_Message} = Please check your email and password.</msg>
+<status status="PASS" endtime="20180304 17:56:39.204" starttime="20180304 17:56:39.204"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${IN_Message}</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.204" level="INFO">Please check your email and password.</msg>
+<status status="PASS" endtime="20180304 17:56:39.204" starttime="20180304 17:56:39.204"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:39.204" starttime="20180304 17:56:39.064"></status>
+</kw>
+<kw type="kw" name="Open Application">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Open the application</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.204" level="INFO">Open the application</msg>
+<status status="PASS" endtime="20180304 17:56:39.204" starttime="20180304 17:56:39.204"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>https://www.udemy.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180304 17:56:39.204" level="INFO">Opening browser 'chrome' to base url 'https://www.udemy.com/'</msg>
+<status status="PASS" endtime="20180304 17:56:44.957" starttime="20180304 17:56:39.204"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=img.udemy-logo</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:54.455" starttime="20180304 17:56:44.957"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:56:54.455" starttime="20180304 17:56:39.204"></status>
+</kw>
+<kw type="kw" name="Login to Application">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>css=img.udemy-logo</arg>
+</arguments>
+<status status="PASS" endtime="20180304 17:56:54.471" starttime="20180304 17:56:54.455"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>css=a.btn.btn-quaternary</arg>
+</arguments>
+<msg timestamp="20180304 17:56:54.471" level="INFO">Clicking element 'css=a.btn.btn-quaternary'.</msg>
+<status status="PASS" endtime="20180304 17:56:54.571" starttime="20180304 17:56:54.471"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20180304 17:57:04.613" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20180304 17:57:04.613" starttime="20180304 17:56:54.572"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${IN_Username}</arg>
+</arguments>
+<msg timestamp="20180304 17:57:04.613" level="INFO">Typing text 'test@gmail.com' into text field 'xpath=//input[@id='id_email']'</msg>
+<status status="PASS" endtime="20180304 17:57:04.844" starttime="20180304 17:57:04.613"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180304 17:57:06.851" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180304 17:57:06.851" starttime="20180304 17:57:04.844"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${password}</arg>
+<arg>${IN_Password}</arg>
+</arguments>
+<msg timestamp="20180304 17:57:06.851" level="INFO">Typing text 'ganesh01' into text field 'xpath=//input[@id='id_password']'</msg>
+<status status="PASS" endtime="20180304 17:57:07.014" starttime="20180304 17:57:06.851"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180304 17:57:09.031" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180304 17:57:09.031" starttime="20180304 17:57:07.015"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20180304 17:57:09.527" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180304 17:57:09.527" starttime="20180304 17:57:09.031"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=.//*[@id='submit-id-submit']</arg>
+</arguments>
+<msg timestamp="20180304 17:57:09.527" level="INFO">Clicking element 'xpath=.//*[@id='submit-id-submit']'.</msg>
+<status status="PASS" endtime="20180304 17:57:09.617" starttime="20180304 17:57:09.527"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20180304 17:57:10.185" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180304 17:57:10.186" starttime="20180304 17:57:09.617"></status>
+</kw>
+<status status="PASS" endtime="20180304 17:57:10.186" starttime="20180304 17:56:54.455"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Sleep">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180304 17:57:13.196" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20180304 17:57:13.196" starttime="20180304 17:57:10.187"></status>
+</kw>
+<kw type="kw" name="${Message1} = Selenium2Library.Get Text">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>${errormessage}</arg>
+</arguments>
+<msg timestamp="20180304 17:57:13.258" level="INFO">${Message1} = Please check your email and password.</msg>
+<status status="PASS" endtime="20180304 17:57:13.258" starttime="20180304 17:57:13.196"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Message1}</arg>
+</arguments>
+<msg timestamp="20180304 17:57:13.258" level="INFO">Please check your email and password.</msg>
+<status status="PASS" endtime="20180304 17:57:13.274" starttime="20180304 17:57:13.258"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal As Strings">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${Message1}</arg>
+<arg>${IN_Message}</arg>
+</arguments>
+<msg timestamp="20180304 17:57:13.274" level="INFO">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20180304 17:57:13.274" starttime="20180304 17:57:13.274"></status>
+</kw>
+<kw type="teardown" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20180304 17:57:15.638" starttime="20180304 17:57:13.274"></status>
+</kw>
+<doc></doc>
+<tags>
+<tag>smoke</tag>
+</tags>
+<status status="PASS" endtime="20180304 17:57:15.638" critical="yes" starttime="20180304 17:56:39.064"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20180304 17:57:15.638" starttime="20180304 17:55:47.051"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="3" pass="2">Critical Tests</stat>
+<stat fail="3" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">sanity</stat>
+<stat info="" links="" doc="" combined="" pass="2" fail="3">smoke</stat>
+</tag>
+<suite>
+<stat fail="3" pass="2" id="s1" name="SamplePrograms">SamplePrograms</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

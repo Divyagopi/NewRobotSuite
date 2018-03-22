@@ -1,0 +1,14 @@
+*** Keywords ***
+Test Intialization
+    [Arguments]    ${rownum}    ${IN_testsheetname}
+    set global variable    ${rownum}    ${rownum}
+    Open Excel    ${Filename}
+    #Log to console    ${rownum},${Filename}
+    ${Cc}=    Get Column Count    ${IN_testsheetname}
+    #Log to console    "Coloumn count is " ${Cc}
+    ${username}=    Get cell value from excel    ${IN_testsheetname}    ${rownum}    UserName
+    Set Suite variable    ${IN_Username}    ${username}
+    ${password}=    Get cell value from excel    ${IN_testsheetname}    ${rownum}    Password
+    Set Suite variable    ${IN_Password}    ${password}
+    ${Message}=    Get cell value from excel    ${IN_testsheetname}    ${rownum}    Message
+    Set Suite variable    ${IN_Message}    ${Message}
